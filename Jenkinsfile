@@ -46,7 +46,8 @@ pipeline {
             steps {
                 sh '''
                     for i in $(seq 1 30); do
-                      if curl --silent --fail "http://127.0.0.1:${APP_PORT}/health" > /tmp/cicd-demo-health.json; then
+                      if docker run --rm --network "container:${CONTAINER_NAME}" curlimages/curl:8.12.1 \
+                        --silent --fail http://127.0.0.1:8080/health > /tmp/cicd-demo-health.json; then
                         cat /tmp/cicd-demo-health.json
                         exit 0
                       fi

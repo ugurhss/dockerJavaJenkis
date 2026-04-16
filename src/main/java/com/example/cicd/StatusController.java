@@ -12,7 +12,7 @@ public class StatusController {
 
     @Value("${app.message:CI/CD ortami hazir}")
     private String appMessage;
-
+//ccc
     @GetMapping("/")
     public Map<String, Object> home() {
         Map<String, Object> response = new LinkedHashMap<>();

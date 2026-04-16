@@ -5,7 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
 public class CicdDemoApplication {
-//sdad bu bir deneme committisadassasd
+//sdad bu bir deneme committisadassasdsss
     public static void main(String[] args) {
         SpringApplication.run(CicdDemoApplication.class, args);
     }
